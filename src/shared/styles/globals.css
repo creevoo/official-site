@@ -11,11 +11,11 @@
     --color-surface: 0 0 98%;
     --color-border: 0 0 93%;
     --color-input: 0 0 94%;
-    --color-primary: 0 0 0%;
+    --color-primary: 94 100 10%;
     --color-primary-foreground: 0 0 98%;
-    --color-secondary: 0 0 94%;
+    --color-secondary: 96 72 67%;
     --color-secondary-foreground: 0 0 10%;
-    --color-link: 221 83 53%;
+    --color-link: 96 100 30%;
     --color-accent: 0 0 40%;
   }
 }
