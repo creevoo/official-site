@@ -8,37 +8,41 @@ import { Footer, Header, Toaster, CenteredLayout } from '@shared/components'
 import { fonts } from '@shared/fonts'
 
 export const metadata: Metadata = {
-  title: 'Nyoman Sunima',
+  title: 'Stunning Website Templates - Creevoo',
   description:
-    'Focused on crafting digital products, website, web app, mobile app to help business.',
+    'Get free and use stunning website template for your landing page, blog, portfolio and business',
   openGraph: {
     ...sharedMetadata.openGraph,
-    title: 'Nyoman Sunima',
+    title: 'Stunning Website Templates - Creevoo',
     description:
-      'Focused on crafting digital products, website, web app, mobile app to help business.',
+      'Get free and use stunning website template for your landing page, blog, portfolio and business',
   },
   twitter: {
     ...sharedMetadata.twitter,
-    title: 'Nyoman Sunima',
+    title: 'Stunning Website Templates - Creevoo',
     description:
-      'Focused on crafting digital products, website, web app, mobile app to help business.',
+      'Get free and use stunning website template for your landing page, blog, portfolio and business',
   },
-  applicationName: 'Nyoman Sunima',
+  applicationName: 'Explore Stunning Website Templates - Creevoo',
   keywords: [
-    'Product Designer',
-    'UI UX Designer',
-    'Web Designer',
-    'Shopify Developer',
-    'Web Developer',
-    'Webflow Expert',
-    'Framer Expert',
-    'Squarespace',
-    'Wix Developer',
-    'Fullstack',
-    'Mobile Developer',
-    'Indie Hacker',
+    'Website templates',
+    'Landing page templates',
+    'Blog templates',
+    'Portfolio templates',
+    'Business templates',
+    'Framer templates',
+    'Tailwind templates',
+    'React templates',
+    'Next templates',
+    'Webflow templates',
+    'Custom templates',
+    'Framer',
+    'Webflow',
+    'Wix',
+    'Shopify',
+    'Templates',
   ],
-  authors: [{ name: 'Nyoman Sunima' }],
+  authors: [{ name: 'Nyoman Sunima', url: 'https://www.nyomansunima.one' }],
   publisher: 'Nyoman Sunima',
   creator: 'Nyoman Sunima',
   metadataBase: new URL(config.app.host),
@@ -62,13 +66,13 @@ export default function RootLayout({
         <body suppressHydrationWarning>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem={true}
+            defaultTheme="light"
+            enableSystem={false}
             disableTransitionOnChange
           >
             <CenteredLayout>
               <Header />
-              <main className="min-h-screen pb-28 tablet:pb-56">
+              <main className="min-h-screen tablet:pt-10 pb-28 tablet:pb-56">
                 {children}
               </main>
               <Footer />
