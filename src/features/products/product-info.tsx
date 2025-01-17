@@ -1,4 +1,3 @@
-import { Button } from '@shared/components'
 import * as React from 'react'
 import { ProductLinkDialog } from './product-link-dialog'
 

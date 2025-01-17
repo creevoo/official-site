@@ -4,13 +4,9 @@ import * as React from 'react'
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
-  FormMessage,
   Button,
-  Label,
   Input,
 } from '@shared/components'
 
@@ -33,7 +29,9 @@ export function SubscribeForm(): React.ReactElement {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {}
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values)
+  }
 
   return (
     <Form {...form}>

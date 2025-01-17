@@ -2,10 +2,8 @@ import * as React from 'react'
 import {
   Button,
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
