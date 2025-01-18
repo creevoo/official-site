@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       sans: ['var(--font-inter)'],
+      mono: ['var(--font-jetbrains-mono)'],
     },
     screens: {
       tablet: '640px',
@@ -76,22 +77,22 @@ const config: Config = {
             },
 
             strong: {
-              fontWeight: '400',
+              fontWeight: '500',
             },
 
             h1: {
               fontSize: theme('fontSize.xl'),
-              fontWeight: '400',
+              fontWeight: '500',
             },
 
             h2: {
               fontSize: theme('fontSize.lg'),
-              fontWeight: '400',
+              fontWeight: '500',
             },
 
             h3: {
               fontSize: theme('fontSize.base'),
-              fontWeight: '400',
+              fontWeight: '500',
             },
           },
         },
