@@ -10,18 +10,18 @@ import {
 } from '@features/products'
 
 export const metadata: Metadata = {
-  title: 'Products - Creevoo',
+  title: 'Products | Creevoo',
   description:
     'Explore stunning website templates with multi platform supported',
   openGraph: {
     ...sharedMetadata.openGraph,
-    title: 'Products - Creevoo',
+    title: 'Products | Creevoo',
     description:
       'Explore stunning website templates with multi platform supported',
   },
   twitter: {
     ...sharedMetadata.twitter,
-    title: 'Products - Creevoo',
+    title: 'Products | Creevoo',
     description:
       'Explore stunning website templates with multi platform supported',
   },
