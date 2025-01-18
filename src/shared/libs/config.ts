@@ -1,4 +1,3 @@
-// TODO: Add your config here
 export const config = {
   isProduction: process.env.NODE_ENV === 'production' || false,
   app: {
@@ -9,5 +8,8 @@ export const config = {
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || '',
+  },
+  loops: {
+    key: process.env.LOOPS_API_KEY || '',
   },
 } as const
