@@ -2,7 +2,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import { Logo } from './logo'
-import { GetUpdateDialog } from '@features/updates'
+import { GetUpdateDialog } from '@features/newsletter'
 
 type NavItemProps = {
   href: string
@@ -11,15 +11,13 @@ type NavItemProps = {
 
 function Brand(): React.ReactElement {
   return (
-    <div className="text-sm gap-3 flex relative z-10">
-      <Link
-        href={'/'}
-        className="transition-all duration-300 hover:-translate-x-1 flex items-center gap-3"
-      >
-        <Logo width={32} height={32} />
-        <span className="font-medium">Creevoo</span>
-      </Link>
-    </div>
+    <Link
+      href={'/'}
+      className="transition-all duration-300 hover:-translate-x-1 flex items-center gap-3 text-sm"
+    >
+      <Logo width={32} height={32} />
+      <span className="font-medium">Creevoo</span>
+    </Link>
   )
 }
 
@@ -42,6 +40,7 @@ function Naviation(): React.ReactElement {
       <ul className="flex items-center gap-6">
         <NavItem href={'/products'}>Products</NavItem>
         <NavItem href={'/about'}>About</NavItem>
+        <NavItem href={'/contact'}>Contact</NavItem>
       </ul>
     </nav>
   )
@@ -49,7 +48,7 @@ function Naviation(): React.ReactElement {
 
 function Actions(): React.ReactElement {
   return (
-    <div className="flex items-center gap-3">
+    <div className="hidden tablet:flex items-center gap-3">
       <GetUpdateDialog />
     </div>
   )
