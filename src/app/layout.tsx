@@ -8,18 +8,18 @@ import { Footer, Header, Toaster, CenteredLayout } from '@shared/components'
 import { fonts } from '@shared/fonts'
 
 export const metadata: Metadata = {
-  title: 'Stunning Website Templates - Creevoo',
+  title: 'Stunning Website Templates | Creevoo',
   description:
     'Get free and use stunning website template for your landing page, blog, portfolio and business',
   openGraph: {
     ...sharedMetadata.openGraph,
-    title: 'Stunning Website Templates - Creevoo',
+    title: 'Stunning Website Templates | Creevoo',
     description:
       'Get free and use stunning website template for your landing page, blog, portfolio and business',
   },
   twitter: {
     ...sharedMetadata.twitter,
-    title: 'Stunning Website Templates - Creevoo',
+    title: 'Stunning Website Templates | Creevoo',
     description:
       'Get free and use stunning website template for your landing page, blog, portfolio and business',
   },
@@ -60,7 +60,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${fonts.inter.variable}`}
+      className={`${fonts.inter.variable} ${fonts.jetBrainsMono.variable}`}
     >
       <PosthogProvider>
         <body suppressHydrationWarning>
@@ -72,7 +72,7 @@ export default function RootLayout({
           >
             <CenteredLayout>
               <Header />
-              <main className="min-h-screen tablet:pt-10 pb-28 tablet:pb-56">
+              <main className="min-h-screen pt-10 pb-28 tablet:pb-56">
                 {children}
               </main>
               <Footer />
