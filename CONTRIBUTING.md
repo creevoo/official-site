@@ -10,17 +10,17 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-     git clone https://github.com/nyomansunima/nextjs-site-starter.git
+     git clone https://github.com/creevoo/official-site.git
    ```
 2. Install the dependencies by run
    ```bash
-     npm install --legacy-peer-deps --silent
+     bun install --legacy-peer-deps --silent
    ```
 3. Start the development server
    ```bash
-     npm run dev
+     bun run dev
    ```
-4. Open the application in your browser `http://localhost:3000` and studio in `http://localhost:3333`
+4. Open the application in your browser `http://localhost:3000`
 
 ## Issues and Pull Requests
 
