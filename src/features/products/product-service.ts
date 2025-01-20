@@ -6,7 +6,7 @@ import { getFrontmatter } from 'next-mdx-remote-client/utils'
 import { evaluate } from 'next-mdx-remote-client/rsc'
 import { notFound } from 'next/navigation'
 
-const PRODUCT_CONTENT_DIR = './src/features/products/contents'
+const PRODUCT_CONTENT_DIR = 'src/features/products/contents'
 
 type ProductFrontmatter = {
   title: string
