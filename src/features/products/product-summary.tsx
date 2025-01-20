@@ -2,7 +2,7 @@ import * as React from 'react'
 
 export function ProductSummary(): React.ReactElement {
   return (
-    <div className="flex flex-col border border-border p-3 rounded-2xl gap-3">
+    <div className="flex flex-col border border-border p-3 rounded-2xl gap-3 text-sm">
       {/* version */}
       <div className="flex gap-1">
         <h3 className="flex items-center gap-1 flex-1">
