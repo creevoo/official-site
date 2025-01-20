@@ -1,15 +1,22 @@
 import * as React from 'react'
 import { ProductLinkDialog } from './product-link-dialog'
+import { ProductDetail } from './product-service'
 
-export function ProductInfo(): React.ReactElement {
+type Props = {
+  product: ProductDetail
+}
+
+export function ProductInfo({ product }: Props): React.ReactElement {
+  const { title, price } = product
+
   return (
     <div className="flex gap-2">
       <div className="flex flex-col flex-1">
-        <h1 className="text-xl">Breain - Simple developer portfolio</h1>
-        <span className="text-foreground/60 mt-1">$25.00</span>
+        <h1 className="text-xl">{title}</h1>
+        <span className="text-foreground/60 mt-1">${price}</span>
       </div>
 
-      <ProductLinkDialog />
+      <ProductLinkDialog product={product} />
     </div>
   )
 }
