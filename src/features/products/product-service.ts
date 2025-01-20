@@ -41,7 +41,9 @@ export type ProductDetail = ProductFrontmatter & {
 
 async function getContentFilePaths(): Promise<string[]> {
   const files =
-    (await fs.readdir(join(process.cwd(), PRODUCT_CONTENT_DIR))) || []
+    (await fs
+      .readdir(join(process.cwd(), PRODUCT_CONTENT_DIR))
+      .catch(() => [])) || []
   const contentFiles = files.filter((file) => file.endsWith('.md'))
   return contentFiles
 }
