@@ -9,8 +9,15 @@ import {
   DialogTrigger,
 } from '@shared/components'
 import Link from 'next/link'
+import { ProductDetail } from './product-service'
 
-export function ProductLinkDialog(): React.ReactElement {
+type Props = {
+  product: ProductDetail
+}
+
+export function ProductLinkDialog({ product }: Props): React.ReactElement {
+  const { publications } = product
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -27,30 +34,17 @@ export function ProductLinkDialog(): React.ReactElement {
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-3 mt-10 pl-2">
-          <Link
-            href={'/'}
-            target="_blank"
-            className="flex items-center gap-2 text-foreground text-sm transition-all duration-300 hover:text-link"
-          >
-            <i className="fi fi-rr-circle-small" />
-            See on framer
-          </Link>
-          <Link
-            href={'/'}
-            target="_blank"
-            className="flex items-center gap-2 text-foreground text-sm transition-all duration-300 hover:text-link"
-          >
-            <i className="fi fi-rr-circle-small" />
-            See on webflow
-          </Link>
-          <Link
-            href={'/'}
-            target="_blank"
-            className="flex items-center gap-2 text-foreground text-sm transition-all duration-300 hover:text-link"
-          >
-            <i className="fi fi-rr-circle-small" />
-            See on themeforest
-          </Link>
+          {publications.map((pub, i) => (
+            <Link
+              key={i}
+              href={pub.url}
+              target="_blank"
+              className="flex items-center gap-2 text-foreground text-sm transition-all duration-300 hover:text-link"
+            >
+              <i className="fi fi-rr-circle-small" />
+              {pub.name}
+            </Link>
+          ))}
         </div>
       </DialogContent>
     </Dialog>
