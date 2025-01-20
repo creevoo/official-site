@@ -1,14 +1,7 @@
 import * as React from 'react'
 import { Metadata } from 'next'
 import { sharedMetadata } from '@shared/libs'
-import {
-  FAQSection,
-  FeatureSection,
-  FreeSection,
-  HeroSection,
-  PlatformSection,
-  TrendSection,
-} from '@features/home'
+import { FAQSection, FeatureSection, HeroSection } from '@features/home'
 
 export const metadata: Metadata = {
   title: 'Stunning Website Templates | Creevoo',
@@ -30,12 +23,9 @@ export const metadata: Metadata = {
 
 export default function HomePage(): React.ReactElement {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-36">
       <HeroSection />
       <FeatureSection />
-      <FreeSection />
-      <PlatformSection />
-      <TrendSection />
       <FAQSection />
     </div>
   )
