@@ -1,6 +1,3 @@
 export * from './hero-section'
 export * from './feature-section'
-export * from './free-section'
-export * from './platfrom-section'
-export * from './trend-section'
 export * from './faq-section'
