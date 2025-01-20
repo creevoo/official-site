@@ -15,7 +15,7 @@ export function GetUpdateDialog(): React.ReactElement {
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          size={'base'}
+          size={'sm'}
           className="transition-all duration-300 hover:-translate-y-1"
         >
           <i className="fi fi-br-envelope-dot" />
