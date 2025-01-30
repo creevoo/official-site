@@ -48,7 +48,7 @@ export function FAQSection(): React.ReactElement {
         <br />
         by folks
       </h2>
-      <p className="text-foreground/60 !leading-relaxed mt-3 text-pretty target:text-balance">
+      <p className="text-foreground/60 leading-relaxed! mt-3 text-pretty target:text-balance">
         Get answers to commonly asked questions.
       </p>
 

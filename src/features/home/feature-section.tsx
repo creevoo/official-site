@@ -82,7 +82,7 @@ export function FeatureSection(): React.ReactElement {
         <br />
         and smarter
       </h2>
-      <p className="text-foreground/60 !leading-relaxed mt-3 text-pretty tablet:text-balance">
+      <p className="text-foreground/60 leading-relaxed! mt-3 text-pretty tablet:text-balance">
         Complete projects 10x faster, take on more clients, and free up your
         time to work on more important things.
       </p>

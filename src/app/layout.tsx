@@ -1,9 +1,9 @@
 import * as React from 'react'
 import type { Metadata } from 'next'
 import '@shared/styles/globals.css'
+import '@flaticon/flaticon-uicons/css/all/all.css'
 import { config, sharedMetadata } from '@shared/libs'
-import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
-import { ThemeProvider, PosthogProvider } from '@shared/providers'
+import { PosthogProvider } from '@shared/providers'
 import { Footer, Header, Toaster, CenteredLayout } from '@shared/components'
 import { fonts } from '@shared/fonts'
 
@@ -64,24 +64,15 @@ export default function RootLayout({
     >
       <PosthogProvider>
         <body suppressHydrationWarning>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="light"
-            enableSystem={false}
-            disableTransitionOnChange
-          >
-            <CenteredLayout>
-              <Header />
-              <main className="min-h-screen pt-10 pb-28 tablet:pb-56">
-                {children}
-              </main>
-              <Footer />
-            </CenteredLayout>
+          <CenteredLayout>
+            <Header />
+            <main className="min-h-screen pt-10 pb-28 tablet:pb-56">
+              {children}
+            </main>
+            <Footer />
+          </CenteredLayout>
 
-            <Toaster />
-          </ThemeProvider>
-
-          <VercelAnalytics />
+          <Toaster />
         </body>
       </PosthogProvider>
     </html>

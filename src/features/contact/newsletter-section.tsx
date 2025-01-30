@@ -7,7 +7,7 @@ export function NewsletterSection(): React.ReactElement {
       <h2 className="text-xl font-medium text-balance">
         Subscribe to our newsletter
       </h2>
-      <p className="text-foreground/60 !leading-relaxed mt-3 text-pretty tablet:text-balance">
+      <p className="text-foreground/60 leading-relaxed! mt-3 text-pretty tablet:text-balance">
         Get the latest updates, tips, and exclusive offers from creevoo. So stay
         update while we're build something.
       </p>

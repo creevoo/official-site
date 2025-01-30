@@ -13,7 +13,7 @@ export function HeroSection(): React.ReactElement {
         <br />
         for every needs
       </h2>
-      <p className="text-foreground/60 !leading-relaxed mt-3 text-pretty tablet:text-balance">
+      <p className="text-foreground/60 leading-relaxed! mt-3 text-pretty tablet:text-balance">
         Beautifully crafted templates for your landing page, blog, portfolio and
         business. Built into different platforms. Easy to use and customize.
       </p>

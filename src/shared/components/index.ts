@@ -1,11 +1,11 @@
 export * from './ui/accordion'
 export * from './ui/button'
-export * from './ui/toast'
 export * from './ui/tooltip'
 export * from './ui/input'
 export * from './ui/dialog'
 export * from './ui/label'
 export * from './ui/form'
+export * from './ui/toast'
 
 export * from './common/content'
 export * from './common/centered-layout'
