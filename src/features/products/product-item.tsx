@@ -22,7 +22,7 @@ export function ProductItem({ product }: Props): React.ReactElement {
           className="transition-all duration-300 group-hover:scale-105 object-cover"
         />
       </picture>
-      <h2 className="text-lg !leading-tight mt-6">{title}</h2>
+      <h2 className="text-lg leading-tight! mt-6">{title}</h2>
       <span className="text-foreground/60 mt-1">${price}</span>
     </Link>
   )

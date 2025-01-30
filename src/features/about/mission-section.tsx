@@ -10,7 +10,7 @@ export function MissionSection(): React.ReactElement {
 
       <span className="border-b-2 border-border border-dashed mt-6" />
 
-      <div className="flex flex-col gap-6 mt-10 text-foreground/60 !leading-relaxed">
+      <div className="flex flex-col gap-6 mt-10 text-foreground/60 leading-relaxed!">
         <p>
           Our mission is to help you{' '}
           <span className="text-foreground">
