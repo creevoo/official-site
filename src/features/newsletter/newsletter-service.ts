@@ -1,11 +1,11 @@
-'use server'
+"use server"
 
-import { loopsAPI } from '@shared/libs/connections'
+import { loopsAPI } from "@shared/libs/connections"
 
 export async function subscribe(values: { email: string }): Promise<void> {
-  const endpoint = '/v1/contacts/create'
+  const endpoint = "/v1/contacts/create"
 
-  const parsedName = values.email.split('@')[0]
+  const parsedName = values.email.split("@")[0]
   const payload = {
     email: values.email,
     firstName: parsedName,
@@ -15,7 +15,7 @@ export async function subscribe(values: { email: string }): Promise<void> {
   }
 
   await loopsAPI(endpoint, {
-    method: 'POST',
-    body: JSON.stringify(payload),
+    method: "POST",
+    body: payload,
   })
 }

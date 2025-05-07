@@ -1,7 +1,6 @@
-import * as React from 'react'
-import { NewsletterForm } from './newsletter-form'
+import { NewsletterForm } from "./newsletter-form"
 
-export function NewsletterSection(): React.ReactElement {
+export function NewsletterSection() {
   return (
     <section className="flex flex-col">
       <h2 className="text-xl font-medium text-balance">

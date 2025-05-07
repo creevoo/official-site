@@ -1,5 +1,5 @@
-import { config } from '@shared/libs'
-import { MetadataRoute } from 'next'
+import { config } from "@shared/libs"
+import { MetadataRoute } from "next"
 
 const BASE_URL = config.app.host
 

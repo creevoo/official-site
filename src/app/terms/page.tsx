@@ -1,25 +1,24 @@
-import * as React from 'react'
-import { Metadata } from 'next'
-import { sharedMetadata } from '@shared/libs'
-import Link from 'next/link'
-import { ArticleContent } from '@shared/components'
+import { Metadata } from "next"
+import { sharedMetadata } from "@shared/libs"
+import Link from "next/link"
+import { ArticleContent } from "@shared/components"
 
 export const metadata: Metadata = {
-  title: 'Terms of use',
-  description: 'Read the terms of use for this site',
+  title: "Terms of use",
+  description: "Read the terms of use for this site",
   openGraph: {
     ...sharedMetadata.openGraph,
-    title: 'Terms of use',
-    description: 'Read the terms of use for this site',
+    title: "Terms of use",
+    description: "Read the terms of use for this site",
   },
   twitter: {
     ...sharedMetadata.twitter,
-    title: 'Terms of use',
-    description: 'Read the terms of use for this site',
+    title: "Terms of use",
+    description: "Read the terms of use for this site",
   },
 }
 
-export default function TermsPage(): React.ReactElement {
+export default function TermsPage() {
   return (
     <div className="flex">
       <ArticleContent>
@@ -27,9 +26,9 @@ export default function TermsPage(): React.ReactElement {
 
         <p>
           These terms of use govern your use of our website, located at 
-          <Link href={'https://www.creevoo.store'}>
+          <Link href={"https://www.creevoo.store"}>
             https://www.creevoo.store
-          </Link>{' '}
+          </Link>{" "}
           Please read these terms carefully before accessing or using our
           website.
         </p>
@@ -96,8 +95,8 @@ export default function TermsPage(): React.ReactElement {
         <h2>Limitation of Liability</h2>
 
         <p>
-          In no event shall{' '}
-          <Link href={'https://www.creevoo.store'}>
+          In no event shall{" "}
+          <Link href={"https://www.creevoo.store"}>
             https://www.creevoo.store
           </Link>
            or its affiliates be liable for any direct, indirect, incidental,
@@ -139,7 +138,7 @@ export default function TermsPage(): React.ReactElement {
 
         <p>
           If you have any questions or concerns regarding these terms of use,
-          please <Link href={'/contact'}>contact us</Link>.
+          please <Link href={"/contact"}>contact us</Link>.
         </p>
       </ArticleContent>
     </div>

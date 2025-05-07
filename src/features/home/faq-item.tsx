@@ -2,8 +2,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@shared/components'
-import * as React from 'react'
+} from "@shared/components"
 
 export type FAQData = {
   question: string
@@ -15,7 +14,7 @@ type FAQItemProps = {
   faq: FAQData
 }
 
-export function FAQItem({ faq, position }: FAQItemProps): React.ReactElement {
+export function FAQItem({ faq, position }: FAQItemProps) {
   const { question, answer } = faq
 
   return (

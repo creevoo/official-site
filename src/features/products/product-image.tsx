@@ -1,14 +1,14 @@
-'use client'
+"use client"
 
-import Image from 'next/image'
-import * as React from 'react'
-import { ProductDetail } from './product-service'
+import * as React from "react"
+import Image from "next/image"
+import { ProductDetail } from "./product-service"
 
 type Props = {
   product: ProductDetail
 }
 
-export function ProductImage({ product }: Props): React.ReactElement {
+export function ProductImage({ product }: Props) {
   const { images, title } = product
   const [selectedImage, setSelectedImage] = React.useState<string>(images[0])
 

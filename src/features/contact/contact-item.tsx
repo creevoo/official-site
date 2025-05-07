@@ -1,14 +1,11 @@
-import Link from 'next/link'
+import Link from "next/link"
 
 type ContactItemProps = {
   href: string
   children: React.ReactNode
 }
 
-export function ContactItem({
-  href,
-  children,
-}: ContactItemProps): React.ReactElement {
+export function ContactItem({ href, children }: ContactItemProps) {
   return (
     <li className="flex">
       <Link

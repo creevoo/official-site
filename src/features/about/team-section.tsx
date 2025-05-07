@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import * as React from 'react'
+import Link from "next/link"
 
-export function TeamSection(): React.ReactElement {
+export function TeamSection() {
   return (
     <section className="flex flex-col">
       <span className="text-foreground/60 text-lg">Meet our team.</span>
@@ -27,7 +26,7 @@ export function TeamSection(): React.ReactElement {
 
       <div className="flex flex-col mt-10 ml-2">
         <Link
-          href={'https://nyomansunima.one'}
+          href={"https://nyomansunima.one"}
           target="_blank"
           className="flex items-center gap-2 transition-all duration-300 hover:text-foreground/60"
         >

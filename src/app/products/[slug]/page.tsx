@@ -1,6 +1,5 @@
-import * as React from 'react'
-import { Metadata, ResolvingMetadata } from 'next'
-import { sharedMetadata } from '@shared/libs'
+import { Metadata, ResolvingMetadata } from "next"
+import { sharedMetadata } from "@shared/libs"
 import {
   ProductContent,
   ProductImage,
@@ -8,7 +7,7 @@ import {
   productService,
   ProductSummary,
   ProductSupport,
-} from '@features/products'
+} from "@features/products"
 
 type Params = {
   slug: string

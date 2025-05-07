@@ -1,2 +1,2 @@
-export * from './contact-section'
-export * from './newsletter-section'
+export * from "./contact-section"
+export * from "./newsletter-section"

@@ -8,6 +8,7 @@ import {
   Button,
   Input,
   toast,
+  FormMessage,
 } from "@shared/components"
 
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -18,11 +19,11 @@ import { newsletterService } from "@features/newsletter"
 const formSchema = z.object({
   email: z
     .string()
-    .email("Opps, your email is look bad")
-    .min(2, "Must be at least 2 characters"),
+    .min(2, "Must be at least 2 characters")
+    .email("Opps, your email is look bad"),
 })
 
-export function NewsletterForm() {
+export function WaitlistForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -31,33 +32,39 @@ export function NewsletterForm() {
   })
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    await newsletterService.subscribe(values)
-    toast("Subscribed successfully")
-    form.reset()
+    await newsletterService
+      .subscribe(values)
+      .then(() => {
+        toast("Subscribed successfully")
+        form.reset()
+      })
+      .catch(() => {
+        form.setError("email", { message: "Opps, something bad happen" })
+        toast("Opps, something error")
+      })
   }
 
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col tablet:flex-row gap-3"
+        className="flex flex-col tablet:flex-row gap-2 w-full"
       >
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
-            <FormItem className="tablet:w-[300px]">
+            <FormItem className="flex flex-col grow">
               <FormControl>
                 <Input placeholder="Your email address" {...field} />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
-        <Button
-          type="submit"
-          className="transition-all duration-300 hover:translate-x-1"
-        >
-          Subscribe now
+        <Button type="submit">
+          Join waiting list
+          <i className="fi fi-br-paper-plane" />
         </Button>
       </form>
     </Form>

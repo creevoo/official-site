@@ -1,11 +1,10 @@
-import * as React from 'react'
-import { ProductDetail } from './product-service'
+import { ProductDetail } from "./product-service"
 
 type Props = {
   product: ProductDetail
 }
 
-export function ProductSummary({ product }: Props): React.ReactElement {
+export function ProductSummary({ product }: Props) {
   const { license, platforms, version } = product.summary
 
   return (

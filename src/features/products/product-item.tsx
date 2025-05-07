@@ -1,13 +1,12 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import * as React from 'react'
-import { Product } from './product-service'
+import Image from "next/image"
+import Link from "next/link"
+import { Product } from "./product-service"
 
 type Props = {
   product: Product
 }
 
-export function ProductItem({ product }: Props): React.ReactElement {
+export function ProductItem({ product }: Props) {
   const { title, image, price, slug } = product
   const url = `/products/${slug}`
 

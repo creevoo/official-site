@@ -1,25 +1,24 @@
-import * as React from 'react'
-import { Metadata } from 'next'
-import { sharedMetadata } from '@shared/libs'
-import Link from 'next/link'
-import { ArticleContent } from '@shared/components'
+import { Metadata } from "next"
+import { sharedMetadata } from "@shared/libs"
+import Link from "next/link"
+import { ArticleContent } from "@shared/components"
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Read the privacy policy for this site',
+  title: "Privacy Policy",
+  description: "Read the privacy policy for this site",
   openGraph: {
     ...sharedMetadata.openGraph,
-    title: 'Privacy Policy',
-    description: 'Read the privacy policy for this site',
+    title: "Privacy Policy",
+    description: "Read the privacy policy for this site",
   },
   twitter: {
     ...sharedMetadata.twitter,
-    title: 'Privacy Policy',
-    description: 'Read the privacy policy for this site',
+    title: "Privacy Policy",
+    description: "Read the privacy policy for this site",
   },
 }
 
-export default function PrivacyPage(): React.ReactElement {
+export default function PrivacyPage() {
   return (
     <div className="flex">
       <ArticleContent>
@@ -27,10 +26,10 @@ export default function PrivacyPage(): React.ReactElement {
 
         <p>
           This privacy policy outlines the information practices and procedures
-          followed by{' '}
-          <Link href={'https://www.creevoo.store'}>
+          followed by{" "}
+          <Link href={"https://www.creevoo.store"}>
             https://www.creevoo.store
-          </Link>{' '}
+          </Link>{" "}
           ("we," "us," or "our") regarding the collection, use, and disclosure
           of personal information when you access and use our website (the
           "Website"). We are committed to protecting your privacy and ensuring
@@ -160,8 +159,8 @@ export default function PrivacyPage(): React.ReactElement {
 
         <p>
           If you have any questions, concerns, or requests regarding this
-          privacy policy or the handling of your personal information, please{' '}
-          <Link href={'/contact'}>contact us</Link>.
+          privacy policy or the handling of your personal information, please{" "}
+          <Link href={"/contact"}>contact us</Link>.
         </p>
       </ArticleContent>
     </div>

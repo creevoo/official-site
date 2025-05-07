@@ -1,6 +1,5 @@
-import * as React from 'react'
-import { ProductItem } from './product-item'
-import { productService } from '.'
+import { ProductItem } from "./product-item"
+import { productService } from "."
 
 export async function ProductListSection(): Promise<React.ReactElement> {
   const products = await productService.getProducts()

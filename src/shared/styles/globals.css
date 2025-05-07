@@ -1,55 +1,40 @@
-@import 'tailwindcss';
+@import "@flaticon/flaticon-uicons/css/all/all" layer(base);
 
-/* Variables and global styles */
-@layer base {
-  :root {
-    --background-color: hsl(0 0 98%);
-    --foreground-color: hsl(0 0 4%);
-    --surface-color: hsl(0 0 98%);
-    --border-color: hsl(0 0 93%);
-    --input-color: hsl(0 0 94%);
-    --primary-color: hsl(0 0 0%);
-    --primary-foreground-color: hsl(0 0 98%);
-    --secondary-color: hsl(96 72 67%);
-    --secondary-foreground-color: hsl(0 0 10%);
-    --link-color: hsl(221 83 53%);
-    --accent-color: hsl(0 0 40%);
-  }
-}
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+@plugin 'tailwindcss-animate';
+@plugin '@tailwindcss/forms';
 
-/* Tailwindcss config */
-@theme inline {
-  --color-background: var(--background-color);
-  --color-foreground: var(--foreground-color);
-  --color-surface: var(--surface-color);
-  --color-border: var(--border-color);
-  --color-input: var(--input-color);
-  --color-link: var(--link-color);
-  --color-accent: var(--accent-color);
-  --color-primary: var(--primary-color);
-  --color-primary-foreground: var(--primary-foreground-color);
-  --color-secondary: var(--secondary-color);
-  --color-secondary-foreground: var(--secondary-foreground-color);
-
-  --font-sans: var(--font-inter);
+@theme {
+  --font-*: initial;
+  --font-sans: var(--font-instrument-sans);
   --font-mono: var(--font-jetbrains-mono);
+
+  --text-sm: 0.84375rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.03125rem;
+  --text-xl: 1.125rem;
 
   --breakpoint-*: initial;
   --breakpoint-tablet: 40rem;
   --breakpoint-laptop: 64rem;
   --breakpoint-desktop: 80rem;
 
-  --text-sm: 0.84375rem;
-  --text-base: 0.9375rem;
-  --text-lg: 1.03125rem;
-  --text-xl: 1.125rem;
+  --leading-tight: 1.1;
+
+  --color-background: hsl(0 0 100%);
+  --color-foreground: hsl(0 0 4%);
+  --color-surface: hsl(0 0 100%);
+  --color-border: hsl(0 0 94%);
+  --color-input: hsl(0 0 97%);
+  --color-primary: hsl(0 0 0%);
+  --color-primary-foreground: hsl(0 0 98%);
+  --color-secondary: hsl(0 0 94%);
+  --color-secondary-foreground: hsl(0 0 10%);
+  --color-accent: hsl(96 72 67%);
+  --color-accent-foreground: hsl(0 0 90%);
+  --color-link: hsl(221 83 53%);
 }
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-@plugin '@tailwindcss/typography';
-@plugin 'tailwindcss-animate';
-@plugin '@tailwindcss/forms';
 
 /* Preset */
 @layer base {
@@ -100,16 +85,16 @@
   font-weight: var(--font-weight-normal);
 
   a {
-    text-decoration: 'none';
-    font-weight: '400 !important';
+    text-decoration: "none";
+    font-weight: "400 !important";
 
     &:hover {
-      text-decoration: 'underline';
+      text-decoration: "underline";
     }
   }
 
   em {
-    font-style: 'italic';
+    font-style: "italic";
     color: var(--color-accent);
   }
 

@@ -1,12 +1,11 @@
-import * as React from 'react'
-import { ProductLinkDialog } from './product-link-dialog'
-import { ProductDetail } from './product-service'
+import { ProductLinkDialog } from "./product-link-dialog"
+import { ProductDetail } from "./product-service"
 
 type Props = {
   product: ProductDetail
 }
 
-export function ProductInfo({ product }: Props): React.ReactElement {
+export function ProductInfo({ product }: Props) {
   const { title, price } = product
 
   return (

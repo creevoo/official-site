@@ -1,8 +1,7 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import * as LabelPrimitive from '@radix-ui/react-label'
-import { Slot } from '@radix-ui/react-slot'
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
 import {
   Controller,
   ControllerProps,
@@ -10,9 +9,8 @@ import {
   FieldValues,
   FormProvider,
   useFormContext,
-} from 'react-hook-form'
-import { Label } from './label'
-import { mergeClass } from '@shared/utils'
+} from "react-hook-form"
+import { mergeClass } from "@shared/utils"
 
 const Form = FormProvider
 
@@ -48,7 +46,7 @@ const useFormField = () => {
   const fieldState = getFieldState(fieldContext.name, formState)
 
   if (!fieldContext) {
-    throw new Error('useFormField should be used within <FormField>')
+    throw new Error("useFormField should be used within <FormField>")
   }
 
   const { id } = itemContext
@@ -81,30 +79,13 @@ const FormItem = React.forwardRef<
     <FormItemContext.Provider value={{ id }}>
       <div
         ref={ref}
-        className={mergeClass('space-y-2', className)}
+        className={mergeClass("space-y-2", className)}
         {...props}
       />
     </FormItemContext.Provider>
   )
 })
-FormItem.displayName = 'FormItem'
-
-const FormLabel = React.forwardRef<
-  React.ComponentRef<typeof LabelPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
->(({ className, ...props }, ref) => {
-  const { error, formItemId } = useFormField()
-
-  return (
-    <Label
-      ref={ref}
-      className={mergeClass(error && 'text-destructive', className)}
-      htmlFor={formItemId}
-      {...props}
-    />
-  )
-})
-FormLabel.displayName = 'FormLabel'
+FormItem.displayName = "FormItem"
 
 const FormControl = React.forwardRef<
   React.ComponentRef<typeof Slot>,
@@ -126,7 +107,7 @@ const FormControl = React.forwardRef<
     />
   )
 })
-FormControl.displayName = 'FormControl'
+FormControl.displayName = "FormControl"
 
 const FormDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -138,12 +119,12 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={mergeClass('text-sm text-muted-foreground', className)}
+      className={mergeClass("text-sm text-muted-foreground", className)}
       {...props}
     />
   )
 })
-FormDescription.displayName = 'FormDescription'
+FormDescription.displayName = "FormDescription"
 
 const FormMessage = React.forwardRef<
   HTMLParagraphElement,
@@ -160,20 +141,19 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={mergeClass('text-sm font-medium text-destructive', className)}
+      className={mergeClass("text-sm text-foreground/60", className)}
       {...props}
     >
       {body}
     </p>
   )
 })
-FormMessage.displayName = 'FormMessage'
+FormMessage.displayName = "FormMessage"
 
 export {
   useFormField,
   Form,
   FormItem,
-  FormLabel,
   FormControl,
   FormDescription,
   FormMessage,

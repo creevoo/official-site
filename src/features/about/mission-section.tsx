@@ -1,6 +1,4 @@
-import * as React from 'react'
-
-export function MissionSection(): React.ReactElement {
+export function MissionSection() {
   return (
     <section className="flex flex-col">
       <span className="text-foreground/60 text-lg">Mission and guidance.</span>
@@ -12,17 +10,17 @@ export function MissionSection(): React.ReactElement {
 
       <div className="flex flex-col gap-6 mt-10 text-foreground/60 leading-relaxed!">
         <p>
-          Our mission is to help you{' '}
+          Our mission is to help you{" "}
           <span className="text-foreground">
             craft websites faster and easier
-          </span>{' '}
+          </span>{" "}
           for all designers and developers in any level of experience. Our
           templates enhance workflows, enabling efficient creation of
           <span className="text-foreground">exceptional websites.</span>
         </p>
         <p>
           With user friendly interfaces, interactions, animations and high score
-          performance, we guide you to make a wonderful website{' '}
+          performance, we guide you to make a wonderful website{" "}
           <span className="text-foreground">in just a few minutes</span>. Now
           you can produce more websites with ease without thinking too much on
           design.

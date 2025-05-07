@@ -1,14 +1,13 @@
-import * as React from 'react'
-import { Metadata } from 'next'
-import Link from 'next/link'
-import { Button } from '@shared/components'
+import { Metadata } from "next"
+import Link from "next/link"
+import { Button } from "@shared/components"
 
 export const metadata: Metadata = {
-  title: 'Not Found',
-  description: ' Opps, good luck. You’re missing the pages',
+  title: "Not Found",
+  description: " Opps, good luck. You’re missing the pages",
 }
 
-export default function NotFound(): React.ReactElement {
+export default function NotFound() {
   return (
     <div className="flex flex-col">
       <section className="flex flex-col items-center py-20">
@@ -26,11 +25,11 @@ export default function NotFound(): React.ReactElement {
         <div className="mt-16">
           <Button
             asChild
-            variant={'text'}
-            size={'lg'}
+            variant={"text"}
+            size={"lg"}
             className="transition-all hover:scale-95"
           >
-            <Link href={'/'}>
+            <Link href={"/"}>
               Bring me back <i className="fi fi-rr-paper-plane" />
             </Link>
           </Button>

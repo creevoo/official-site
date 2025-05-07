@@ -1,7 +1,6 @@
-import * as React from 'react'
-import { ContactItem } from './contact-item'
+import { ContactItem } from "./contact-item"
 
-export function ContactSection(): React.ReactElement {
+export function ContactSection() {
   return (
     <section className="flex flex-col">
       <h2 className="text-xl font-medium text-balance">
@@ -14,10 +13,10 @@ export function ContactSection(): React.ReactElement {
 
       <div className="flex mt-10">
         <ul className="flex flex-col gap-2">
-          <ContactItem href={'mailto:nyomansunima@gmail.com'}>
+          <ContactItem href={"mailto:nyomansunima@gmail.com"}>
             Send me email
           </ContactItem>
-          <ContactItem href={'https://x.com/nyomansunima'}>
+          <ContactItem href={"https://x.com/nyomansunima"}>
             Connect on twitter
           </ContactItem>
         </ul>

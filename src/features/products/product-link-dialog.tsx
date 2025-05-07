@@ -1,4 +1,3 @@
-import * as React from 'react'
 import {
   Button,
   Dialog,
@@ -7,15 +6,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@shared/components'
-import Link from 'next/link'
-import { ProductDetail } from './product-service'
+} from "@shared/components"
+import Link from "next/link"
+import { ProductDetail } from "./product-service"
 
 type Props = {
   product: ProductDetail
 }
 
-export function ProductLinkDialog({ product }: Props): React.ReactElement {
+export function ProductLinkDialog({ product }: Props) {
   const { publications } = product
 
   return (

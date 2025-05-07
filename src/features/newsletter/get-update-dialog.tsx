@@ -1,4 +1,3 @@
-import * as React from 'react'
 import {
   Button,
   Dialog,
@@ -7,15 +6,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@shared/components'
-import { SubscribeForm } from './subscribe-form'
+} from "@shared/components"
+import { SubscribeForm } from "./subscribe-form"
 
-export function GetUpdateDialog(): React.ReactElement {
+export function GetUpdateDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button
-          size={'sm'}
+          size={"sm"}
           className="transition-all duration-300 hover:-translate-y-1"
         >
           <i className="fi fi-br-envelope-dot" />
