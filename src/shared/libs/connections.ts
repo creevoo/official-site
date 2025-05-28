@@ -1,9 +1,4 @@
-import { loadConfig } from "./config"
-
-const config = loadConfig()
-
-const LOOPS_API_KEY = config.loops.key
-const LOOPS_BASE_URL = `https://app.loops.so/api`
+const WAITLIST_BASE_URL = `https://api.getwaitlist.com/api`
 
 type Options = {
   method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH"
@@ -48,8 +43,4 @@ export function createConnection(
   }
 }
 
-export const loopsAPI = createConnection(LOOPS_BASE_URL, {
-  headers: {
-    Authorization: `Bearer ${LOOPS_API_KEY}`,
-  },
-})
+export const waitlistAPI = createConnection(WAITLIST_BASE_URL, {})
