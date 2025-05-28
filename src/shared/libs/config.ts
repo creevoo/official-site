@@ -27,8 +27,5 @@ export function loadConfig() {
     verification: {
       google: ENV.GOOGLE_VERIFICATION,
     },
-    loops: {
-      key: ENV.LOOPS_API_KEY,
-    },
   } as const
 }
