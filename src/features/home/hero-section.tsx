@@ -1,5 +1,5 @@
+import { WaitlistForm } from "@features/newsletter"
 import { SectionLabel } from "@shared/components"
-import { WaitlistForm } from "./waitlist-form"
 
 export function HeroSection() {
   return (
