@@ -1,5 +1,3 @@
-import { NewsletterForm } from "./newsletter-form"
-
 export function NewsletterSection() {
   return (
     <section className="flex flex-col">
@@ -12,8 +10,6 @@ export function NewsletterSection() {
       </p>
 
       <div className="flex flex-col gap-5 mt-10">
-        <NewsletterForm />
-
         <div className="flex items-center gap-x-6 gap-y-3 flex-wrap">
           <span className="flex items-center gap-2 text-sm text-foreground/60 transition-all duration-300 hover:text-foreground cursor-pointer">
             <i className="fi fi-rr-check-circle text-green-600" />
