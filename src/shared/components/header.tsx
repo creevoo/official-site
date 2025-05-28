@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 import { Logo } from "./logo"
-import { Button } from "../ui/button"
+import { Button } from "./ui/button"
 
 type NavItemProps = {
   href: string
