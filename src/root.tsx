@@ -9,7 +9,7 @@ import {
 } from "react-router"
 import type { Route } from "./+types/root"
 import "@shared/styles/globals.css"
-import { Button, Footer, Header, Toaster } from "@shared/components"
+import { Button, Footer, Header } from "@shared/components"
 import { loadConfig, loadServerEnv } from "@shared/libs"
 
 type LayoutProps = {
@@ -53,7 +53,6 @@ export function Layout({ children }: LayoutProps) {
         <Header />
         <div className="min-h-screen pt-10 pb-28 tablet:pb-56">{children}</div>
         <Footer />
-        <Toaster />
         <ScrollRestoration />
         <Scripts />
       </body>
