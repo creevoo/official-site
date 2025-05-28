@@ -1,5 +1,4 @@
-import Image from "next/image"
-import { mergeClass } from "@shared/utils"
+import { mergeClass } from "@shared/libs"
 
 type ArticleContentProps = {
   children: React.ReactNode
@@ -32,17 +31,14 @@ export function ContentImage({ src, alt, className }: ContentImageProps) {
         className,
       )}`}
     >
-      <picture className="relative w-full h-[200px] tablet:h-[400px] overflow-hidden rounded-xl not-prose">
-        <Image
+      <div className="relative w-full h-[200px] tablet:h-[400px] overflow-hidden rounded-xl not-prose">
+        <img
           src={src}
           alt={alt}
-          quality={100}
-          fill
-          priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-all duration-300 hover:scale-105 not-prose"
         />
-      </picture>
+      </div>
     </div>
   )
 }

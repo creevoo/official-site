@@ -1,21 +1,12 @@
-import { Metadata } from "next"
-import { sharedMetadata } from "@shared/libs"
-import Link from "next/link"
+import { Link } from "react-router"
 import { ArticleContent } from "@shared/components"
+import { generatedMetadata } from "@shared/libs"
 
-export const metadata: Metadata = {
-  title: "Terms of use",
-  description: "Read the terms of use for this site",
-  openGraph: {
-    ...sharedMetadata.openGraph,
-    title: "Terms of use",
+export function meta() {
+  return generatedMetadata({
+    title: "Terms of use | Creevoo",
     description: "Read the terms of use for this site",
-  },
-  twitter: {
-    ...sharedMetadata.twitter,
-    title: "Terms of use",
-    description: "Read the terms of use for this site",
-  },
+  })
 }
 
 export default function TermsPage() {
@@ -26,7 +17,7 @@ export default function TermsPage() {
 
         <p>
           These terms of use govern your use of our website, located at 
-          <Link href={"https://www.creevoo.store"}>
+          <Link to={"https://www.creevoo.store"}>
             https://www.creevoo.store
           </Link>{" "}
           Please read these terms carefully before accessing or using our
@@ -96,7 +87,7 @@ export default function TermsPage() {
 
         <p>
           In no event shall{" "}
-          <Link href={"https://www.creevoo.store"}>
+          <Link to={"https://www.creevoo.store"}>
             https://www.creevoo.store
           </Link>
            or its affiliates be liable for any direct, indirect, incidental,
@@ -138,7 +129,7 @@ export default function TermsPage() {
 
         <p>
           If you have any questions or concerns regarding these terms of use,
-          please <Link href={"/contact"}>contact us</Link>.
+          please <Link to={"/contact"}>contact us</Link>.
         </p>
       </ArticleContent>
     </div>

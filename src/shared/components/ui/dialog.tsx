@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as DialogPrimitive from "@radix-ui/react-dialog"
-import { mergeClass } from "@shared/utils"
+import { mergeClass } from "@shared/libs"
 
 const Dialog = DialogPrimitive.Root
 

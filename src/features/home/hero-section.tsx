@@ -17,7 +17,7 @@ export function HeroSection() {
           templates & components
         </h2>
 
-        <p className="text-foreground/70 leading-7 mt-10 text-pretty tablet:w-6/12 text-center">
+        <p className="text-foreground/60 leading-7 mt-10 text-pretty tablet:w-6/12 text-center">
           Beautifully crafted templates and components for your landing page,
           blog, portfolio and business sites. Built into different platforms.
           Easy to use and customize.

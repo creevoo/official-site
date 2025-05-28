@@ -1,6 +1,4 @@
-"use server"
-
-import { loopsAPI } from "@shared/libs/connections"
+import { loopsAPI } from "@shared/libs"
 
 export async function subscribe(values: { email: string }): Promise<void> {
   const endpoint = "/v1/contacts/create"

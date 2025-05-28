@@ -1,21 +1,12 @@
-import { Metadata } from "next"
-import { sharedMetadata } from "@shared/libs"
-import Link from "next/link"
+import { Link } from "react-router"
 import { ArticleContent } from "@shared/components"
+import { generatedMetadata } from "@shared/libs"
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "Read the privacy policy for this site",
-  openGraph: {
-    ...sharedMetadata.openGraph,
-    title: "Privacy Policy",
+export function meta() {
+  return generatedMetadata({
+    title: "Privacy policy | Creevoo",
     description: "Read the privacy policy for this site",
-  },
-  twitter: {
-    ...sharedMetadata.twitter,
-    title: "Privacy Policy",
-    description: "Read the privacy policy for this site",
-  },
+  })
 }
 
 export default function PrivacyPage() {
@@ -27,7 +18,7 @@ export default function PrivacyPage() {
         <p>
           This privacy policy outlines the information practices and procedures
           followed by{" "}
-          <Link href={"https://www.creevoo.store"}>
+          <Link to={"https://www.creevoo.store"}>
             https://www.creevoo.store
           </Link>{" "}
           ("we," "us," or "our") regarding the collection, use, and disclosure
@@ -160,7 +151,7 @@ export default function PrivacyPage() {
         <p>
           If you have any questions, concerns, or requests regarding this
           privacy policy or the handling of your personal information, please{" "}
-          <Link href={"/contact"}>contact us</Link>.
+          <Link to={"/contact"}>contact us</Link>.
         </p>
       </ArticleContent>
     </div>

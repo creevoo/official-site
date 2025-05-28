@@ -4,13 +4,13 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import {
   Controller,
-  ControllerProps,
-  FieldPath,
-  FieldValues,
   FormProvider,
   useFormContext,
+  type ControllerProps,
+  type FieldPath,
+  type FieldValues,
 } from "react-hook-form"
-import { mergeClass } from "@shared/utils"
+import { mergeClass } from "@shared/libs"
 
 const Form = FormProvider
 
@@ -141,7 +141,7 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={mergeClass("text-sm text-foreground/60", className)}
+      className={mergeClass("ml-2 text-sm text-rose-500", className)}
       {...props}
     >
       {body}

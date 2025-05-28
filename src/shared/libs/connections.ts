@@ -1,4 +1,6 @@
-import { config } from "./config"
+import { loadConfig } from "./config"
+
+const config = loadConfig()
 
 const LOOPS_API_KEY = config.loops.key
 const LOOPS_BASE_URL = `https://app.loops.so/api`
@@ -7,7 +9,6 @@ type Options = {
   method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH"
   headers?: HeadersInit
   body?: any
-  cache?: RequestCache
 }
 
 export function createConnection(
@@ -21,12 +22,11 @@ export function createConnection(
     const combinedOptions: Options = {
       method: "GET",
       headers: {},
-      cache: "no-cache",
       ...defaultOptions,
       ...options,
     }
 
-    const { method, headers, body, cache } = combinedOptions
+    const { method, headers, body } = combinedOptions
     const fetchUrl = `${baseURL}${endpoint}`
 
     const res = await fetch(fetchUrl, {
@@ -37,10 +37,10 @@ export function createConnection(
         ...headers,
       },
       body: body ? JSON.stringify(body) : undefined,
-      cache,
     })
 
     if (!res.ok) {
+      console.log(await res.json())
       throw new Error("Error fetching data")
     }
 

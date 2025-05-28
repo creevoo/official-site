@@ -1,8 +1,7 @@
 import { ProductItem } from "./product-item"
-import { productService } from "."
 
 export async function ProductListSection(): Promise<React.ReactElement> {
-  const products = await productService.getProducts()
+  const products = []
 
   return (
     <div className="flex flex-col">

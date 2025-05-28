@@ -7,8 +7,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@shared/components"
-import Link from "next/link"
-import { ProductDetail } from "./product-service"
+import { Link } from "react-router"
+import { type ProductDetail } from "./product-service"
 
 type Props = {
   product: ProductDetail
@@ -36,7 +36,7 @@ export function ProductLinkDialog({ product }: Props) {
           {publications.map((pub, i) => (
             <Link
               key={i}
-              href={pub.url}
+              to={pub.url}
               target="_blank"
               className="flex items-center gap-2 text-foreground text-sm transition-all duration-300 hover:text-link"
             >

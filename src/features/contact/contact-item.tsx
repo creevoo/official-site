@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "react-router"
 
 type ContactItemProps = {
   href: string
@@ -9,7 +9,7 @@ export function ContactItem({ href, children }: ContactItemProps) {
   return (
     <li className="flex">
       <Link
-        href={href}
+        to={href}
         target="_blank"
         className="flex items-center gap-2 hover:text-foreground/60 transition-all duration-300"
       >

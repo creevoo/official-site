@@ -1,5 +1,5 @@
 import { Button } from "@shared/components"
-import Link from "next/link"
+import { Link } from "react-router"
 
 export function ProductSupport() {
   return (
@@ -13,7 +13,7 @@ export function ProductSupport() {
 
       <div className="flex mt-5">
         <Button variant={"outline"} size={"sm"} asChild>
-          <Link href={"https://www.tryweebo.one"} target="_blank">
+          <Link to={"https://www.tryweebo.one"} target="_blank">
             <i className="fi fi-rr-headset" />
             Use Weebo
           </Link>

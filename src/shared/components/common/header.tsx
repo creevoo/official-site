@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "react-router"
 import { Logo } from "./logo"
 import { Button } from "../ui/button"
 
@@ -10,7 +10,7 @@ type NavItemProps = {
 function Brand() {
   return (
     <Link
-      href={"/"}
+      to={"/"}
       className="transition-all duration-300 hover:-translate-x-1 flex items-center text-sm"
     >
       <Logo width={40} height={40} />
@@ -23,7 +23,7 @@ function NavItem({ children, href }: NavItemProps) {
   return (
     <li className="flex items-center text-sm">
       <Link
-        href={href}
+        to={href}
         className="flex items-center gap-2 transition-all duration-300 text-foreground/60 hover:text-foreground hover:-translate-y-1"
       >
         {children}

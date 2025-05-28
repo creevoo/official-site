@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { mergeClass } from "@shared/utils"
+import { Link } from "react-router"
+import { mergeClass } from "@shared/libs"
 
 const footerMenus = [
   { label: "Privacy policy", href: "/privacy" },
@@ -20,7 +20,7 @@ export function MenuItem({ href, children, className }: MenuItemProps) {
         className,
       )}`}
     >
-      <Link href={href} className="w-full h-full">
+      <Link to={href} className="w-full h-full">
         {children}
       </Link>
     </li>

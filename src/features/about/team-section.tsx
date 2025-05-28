@@ -1,4 +1,4 @@
-import Link from "next/link"
+import { Link } from "react-router"
 
 export function TeamSection() {
   return (
@@ -26,7 +26,7 @@ export function TeamSection() {
 
       <div className="flex flex-col mt-10 ml-2">
         <Link
-          href={"https://nyomansunima.one"}
+          to={"https://nyomansunima.one"}
           target="_blank"
           className="flex items-center gap-2 transition-all duration-300 hover:text-foreground/60"
         >

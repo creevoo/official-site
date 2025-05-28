@@ -1,15 +1,34 @@
-export const config = {
-  isProduction: process.env.NODE_ENV === "production" || false,
-  app: {
-    host: process.env.NEXT_PUBLIC_APP_HOST || "http://localhost:3000",
-  },
-  posthog: {
-    key: process.env.NEXT_PUBLIC_POSTHOG_KEY || "",
-  },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION || "",
-  },
-  loops: {
-    key: process.env.LOOPS_API_KEY || "",
-  },
-} as const
+declare global {
+  interface Window {
+    __ENV__: any
+  }
+}
+
+function isBrowser() {
+  return typeof window !== "undefined" ? true : false
+}
+
+export function loadServerEnv() {
+  const env = process.env
+  return env
+}
+
+export function loadConfig() {
+  const isOnBrowser = isBrowser()
+  const ENV = isOnBrowser ? window.__ENV__ : process.env
+
+  return {
+    app: {
+      host: ENV.APP_HOST || "http://localhost:5173",
+    },
+    posthog: {
+      key: ENV.POSTHOG_KEY,
+    },
+    verification: {
+      google: ENV.GOOGLE_VERIFICATION,
+    },
+    loops: {
+      key: ENV.LOOPS_API_KEY,
+    },
+  } as const
+}

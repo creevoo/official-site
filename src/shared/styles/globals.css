@@ -31,7 +31,7 @@
   --color-primary-foreground: hsl(0 0 98%);
   --color-secondary: hsl(0 0 94%);
   --color-secondary-foreground: hsl(0 0 10%);
-  --color-accent: hsl(96 72 67%);
+  --color-accent: hsl(340 100 77%);
   --color-accent-foreground: hsl(0 0 90%);
   --color-link: hsl(221 83 53%);
 }
@@ -86,7 +86,7 @@
 
   a {
     text-decoration: "none";
-    font-weight: "400 !important";
+    font-weight: 400 !important;
 
     &:hover {
       text-decoration: "underline";
