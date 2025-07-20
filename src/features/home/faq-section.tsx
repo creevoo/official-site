@@ -1,5 +1,6 @@
 import { Accordion, SectionLabel } from "@shared/components"
-import { type FAQData, FAQItem } from "./faq-item"
+import { FAQItem } from "./faq-item"
+import type { FAQData } from "./faq-item"
 import * as motion from "motion/react-client"
 
 const faqs: FAQData[] = [

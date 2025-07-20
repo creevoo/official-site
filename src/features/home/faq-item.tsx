@@ -4,12 +4,12 @@ import {
   AccordionTrigger,
 } from "@shared/components"
 
-export type FAQData = {
+export interface FAQData {
   question: string
   answer: string
 }
 
-type FAQItemProps = {
+interface FAQItemProps {
   position: number
   faq: FAQData
 }
