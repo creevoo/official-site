@@ -2,7 +2,7 @@ import { Link } from "react-router"
 import { Logo } from "./logo"
 import { Button } from "./ui/button"
 
-type NavItemProps = {
+interface NavItemProps {
   href: string
   children: React.ReactNode
 }

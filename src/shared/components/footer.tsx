@@ -6,7 +6,7 @@ const footerMenus = [
   { label: "Terms of use", href: "/terms" },
 ]
 
-type MenuItemProps = {
+interface MenuItemProps {
   href: string
   children?: React.ReactNode
   className?: string

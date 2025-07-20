@@ -5,7 +5,7 @@ declare global {
 }
 
 function isBrowser() {
-  return typeof window !== "undefined" ? true : false
+  return typeof window !== "undefined"
 }
 
 export function loadServerEnv() {

@@ -1,4 +1,4 @@
-type SectionLabelProps = {
+interface SectionLabelProps {
   children: React.ReactNode
 }
 
