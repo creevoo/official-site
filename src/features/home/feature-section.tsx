@@ -1,13 +1,13 @@
 import { SectionLabel } from "@shared/components"
 import * as motion from "motion/react-client"
 
-type Feature = {
+interface Feature {
   title: string
   description: string
   icon: string
 }
 
-type FeatureItemProps = {
+interface FeatureItemProps {
   feature: Feature
 }
 

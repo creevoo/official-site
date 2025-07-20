@@ -1,6 +1,6 @@
 import { ProductItem } from "./product-item"
 
-export async function ProductListSection(): Promise<React.ReactElement> {
+export function ProductListSection() {
   const products = []
 
   return (
@@ -11,7 +11,7 @@ export async function ProductListSection(): Promise<React.ReactElement> {
             <ProductItem key={i} product={product} />
           ))}
 
-        {products.length == 0 && (
+        {products.length === 0 && (
           <div className="flex flex-col items-center">
             <span className="text-foreground/60 flex items-center gap-2">
               <i className="fi fi-rr-spinner animate-spin" /> More coming soon

@@ -19,7 +19,7 @@ export default function TermsPage() {
           These terms of use govern your use of our website, located at 
           <Link to={"https://www.creevoo.store"}>
             https://www.creevoo.store
-          </Link>{" "}
+          </Link>
           Please read these terms carefully before accessing or using our
           website.
         </p>

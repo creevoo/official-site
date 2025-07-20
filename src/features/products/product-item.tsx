@@ -1,7 +1,7 @@
 import { Link } from "react-router"
-import { type Product } from "./product-service"
+import type { Product } from "./product-service"
 
-type Props = {
+interface Props {
   product: Product
 }
 

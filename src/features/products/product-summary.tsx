@@ -1,6 +1,6 @@
-import { type ProductDetail } from "./product-service"
+import type { ProductDetail } from "./product-service"
 
-type Props = {
+interface Props {
   product: ProductDetail
 }
 

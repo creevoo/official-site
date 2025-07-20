@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 
-type ContactItemProps = {
+interface ContactItemProps {
   href: string
   children: React.ReactNode
 }

@@ -1,6 +1,6 @@
 const WAITLIST_BASE_URL = `https://api.getwaitlist.com/api`
 
-type Options = {
+interface Options {
   method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH"
   headers?: HeadersInit
   body?: any

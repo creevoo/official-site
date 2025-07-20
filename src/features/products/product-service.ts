@@ -1,11 +1,4 @@
-"use server"
-
-import { join } from "path"
-import { promises as fs } from "fs"
-
-const PRODUCT_CONTENT_DIR = "src/features/products/contents"
-
-type ProductFrontmatter = {
+interface ProductFrontmatter {
   title: string
   description: string
   images: string[]
@@ -19,10 +12,6 @@ type ProductFrontmatter = {
     name: string
     url: string
   }[]
-}
-
-type ProductMetadata = Pick<ProductFrontmatter, "title" | "description"> & {
-  image: string
 }
 
 export type Product = Pick<ProductFrontmatter, "title" | "price"> & {

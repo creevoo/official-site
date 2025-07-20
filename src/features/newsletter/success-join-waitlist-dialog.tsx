@@ -6,7 +6,7 @@ import {
   DialogTitle,
 } from "@shared/components"
 
-type Props = {
+interface Props {
   open: boolean
   onOpenChange: (state: boolean) => void
 }
